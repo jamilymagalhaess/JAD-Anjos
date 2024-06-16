@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anjos.Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5fa3113494605cbb10e00804b81d45cac71dbdb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abb40d93640ef39ec3d9bcef1e0be6512fd5477e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anjos.Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anjos.Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
