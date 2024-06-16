@@ -12,6 +12,10 @@ Desktop.ini
 .idea/
 .vs/
 
+# Pastas de compilação e binários
+bin/
+obj/
+
 # Dependências
 node_modules/
 vendor/
