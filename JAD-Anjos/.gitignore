@@ -1,0 +1,89 @@
+# Sistema operacional e arquivos específicos do IDE
+
+# Arquivos de sistema do macOS
+.DS_Store
+
+# Arquivos de sistema do Windows
+Thumbs.db
+Desktop.ini
+
+# Pastas de IDEs
+.vscode/
+.idea/
+.vs/
+
+# Dependências
+node_modules/
+vendor/
+
+# Arquivos de compilação
+dist/
+build/
+out/
+*.o
+*.obj
+*.dll
+*.class
+*.exe
+*.so
+*.jar
+*.war
+*.pyc
+*.pyo
+
+# Logs e bancos de dados temporários
+*.log
+*.sql
+*.sqlite
+
+# Arquivos temporários
+*.tmp
+*.swp
+
+# Arquivos de configuração local
+.env
+.local
+
+# Arquivos de teste
+coverage/
+.nyc_output/
+junit/
+
+# Arquivos de pacotes
+*.tgz
+*.zip
+*.tar.gz
+*.rar
+
+# Pastas de backup
+*.bak
+*.backup
+
+# Exclui o seguinte arquivo caso ele exista, é usado para correções temporárias
+*.orig
+
+# Ignora a pasta 'node_modules' para projetos Node.js
+node_modules/
+
+# Ignora a pasta 'venv' para ambientes virtuais Python
+venv/
+
+# Ignora arquivos de configuração do Editorconfig
+.editorconfig
+
+# Outros arquivos que não devem ser commitados
+.sass-cache/
+.tmp/
+.tmp/
+.sass-cache/
+.cache/
+.project
+.idea/
+*.iml
+*.iws
+
+# Arquivos específicos de contêineres
+docker-compose.override.yml
+
+# Arquivos do Visual Studio Code
+.history/

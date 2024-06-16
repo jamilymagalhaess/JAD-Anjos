@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anjos.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5fa3113494605cbb10e00804b81d45cac71dbdb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d32894c7d5512e09da00fe05c6cb3eb4f0263688")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anjos.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anjos.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
