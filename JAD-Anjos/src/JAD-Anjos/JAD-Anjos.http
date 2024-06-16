@@ -1,6 +1,0 @@
-@JAD_Anjos_HostAddress = http://localhost:5283
-
-GET {{JAD_Anjos_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

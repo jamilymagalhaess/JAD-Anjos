@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "iQcU1YsW18xyUVjRiI1f1vWyLzTxQKZ8u1vBT1XL+d4LKfsWzfF7nifodlNcbunX3nbSWK/wuxK3HZ+HQxHiBw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jamily\\Desktop\\PROJETOS PESSOAIS\\JAD-Anjos\\src\\Anjos.API\\Anjos.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jamily\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Jamily\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Jamily\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Jamily\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Jamily\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Jamily\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

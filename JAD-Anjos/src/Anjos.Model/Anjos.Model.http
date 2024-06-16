@@ -1,0 +1,6 @@
+@Anjos.Model_HostAddress = http://localhost:5201
+
+GET {{Anjos.Model_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

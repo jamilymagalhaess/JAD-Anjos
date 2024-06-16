@@ -1,0 +1,6 @@
+@Anjos.Application_HostAddress = http://localhost:5025
+
+GET {{Anjos.Application_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
