@@ -1,0 +1,89 @@
+-- Criação da tabela Categoria
+CREATE TABLE Categoria (
+    Id INT PRIMARY KEY IDENTITY,
+    Nome NVARCHAR(127) NOT NULL,
+    Descricao NVARCHAR(MAX) NOT NULL
+);
+
+-- Criação da tabela Produto
+CREATE TABLE Produto (
+    Id INT PRIMARY KEY IDENTITY,
+    Nome NVARCHAR(127) NOT NULL,
+    Descricao NVARCHAR(MAX) NOT NULL,
+    CategoriaId INT NOT NULL,
+    Valor DECIMAL(18, 4) NOT NULL,
+    Quantidade INT NOT NULL,
+    ExibeNoSite BIT,
+    FOREIGN KEY (CategoriaId) REFERENCES Categoria(Id)
+);
+
+-- Criação da tabela Venda
+CREATE TABLE Venda (
+    Id INT PRIMARY KEY IDENTITY,
+    Valor DECIMAL(18, 4) NOT NULL,
+    DataVenda DATE NOT NULL,
+    DataInclusao DATETIME NOT NULL,
+    FormaPagamento NVARCHAR(127) NOT NULL
+);
+
+-- Criação da tabela ContaReceber
+CREATE TABLE ContaReceber (
+    Id INT PRIMARY KEY IDENTITY,
+    VendaId INT NOT NULL,
+    QuantidadeParcelas INT NOT NULL,
+    Valor DECIMAL(18, 4) NOT NULL,
+    FOREIGN KEY (VendaId) REFERENCES Venda(Id)
+);
+
+-- Criação da tabela VendaProduto
+CREATE TABLE VendaProduto (
+    Id INT PRIMARY KEY IDENTITY,
+    VendaId INT NOT NULL,
+    ProdutoId INT NOT NULL,
+    Valor DECIMAL(18, 4) NOT NULL,
+    Quantidade INT NOT NULL,
+    FOREIGN KEY (VendaId) REFERENCES Venda(Id),
+    FOREIGN KEY (ProdutoId) REFERENCES Produto(Id)
+);
+
+-- Criação da tabela Entrada
+CREATE TABLE Entrada (
+    Id INT PRIMARY KEY IDENTITY,
+    Valor DECIMAL(18, 4) NOT NULL
+);
+
+-- Criação da tabela EntradaProduto
+CREATE TABLE EntradaProduto (
+    Id INT PRIMARY KEY IDENTITY,
+    EntradaId INT NOT NULL,
+    ProdutoId INT NOT NULL,
+    Quantidade INT NOT NULL,
+    Valor DECIMAL(18, 4) NOT NULL,
+    DataEntrada DATE NOT NULL,
+    DataInclusao DATETIME NOT NULL,
+    FOREIGN KEY (EntradaId) REFERENCES Entrada(Id),
+    FOREIGN KEY (ProdutoId) REFERENCES Produto(Id)
+);
+
+-- Criação da tabela ContaPagar
+CREATE TABLE ContaPagar (
+    Id INT PRIMARY KEY IDENTITY,
+    EntradaId INT NOT NULL,
+    Valor DECIMAL(18, 4) NOT NULL,
+    QuantidadeParcelas INT NOT NULL,
+    FOREIGN KEY (EntradaId) REFERENCES Entrada(Id)
+);
+
+-- Criação da tabela Parcela
+CREATE TABLE Parcela (
+    Id INT PRIMARY KEY IDENTITY,
+    Tipo INT NOT NULL,
+    Numero INT NOT NULL,
+    Valor DECIMAL(18, 4) NOT NULL,
+    Juros DECIMAL(18, 4) NOT NULL,
+    ContaPagarId INT NOT NULL,
+    DataVencimento DATE NOT NULL,
+    ContaReceberId INT NOT NULL,
+    FOREIGN KEY (ContaPagarId) REFERENCES ContaPagar(Id),
+    FOREIGN KEY (ContaReceberId) REFERENCES ContaReceber(Id)
+);
