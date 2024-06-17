@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anjos.API", "src\Anjos.API\Anjos.API.csproj", "{E6BBFF6F-4BBC-4954-A0CE-BB1D7D1FD0F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anjos.API", "src\Anjos.API\Anjos.API.csproj", "{E6BBFF6F-4BBC-4954-A0CE-BB1D7D1FD0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anjos.Application", "src\Anjos.Application\Anjos.Application.csproj", "{842DA308-073E-45DD-9CC4-94EB803F8FCF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BADE2592-2DAB-413D-B57B-74A9864ADA7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anjos.Database", "src\Anjos.Database\Anjos.Database.csproj", "{9C375A05-061A-4AB5-A8E0-707F6B26F246}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anjos.Application", "src\Anjos.Application\Anjos.Application.csproj", "{842DA308-073E-45DD-9CC4-94EB803F8FCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anjos.Domain", "src\Anjos.Domain\Anjos.Domain.csproj", "{AFF002C3-1398-4B47-BA81-2D7CCE5810E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anjos.Database", "src\Anjos.Database\Anjos.Database.csproj", "{9C375A05-061A-4AB5-A8E0-707F6B26F246}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anjos.Model", "src\Anjos.Model\Anjos.Model.csproj", "{DA007106-3DBF-4FA6-887F-D9CF65BAFFC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anjos.Domain", "src\Anjos.Domain\Anjos.Domain.csproj", "{AFF002C3-1398-4B47-BA81-2D7CCE5810E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anjos.Model", "src\Anjos.Model\Anjos.Model.csproj", "{DA007106-3DBF-4FA6-887F-D9CF65BAFFC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{73B833F3-1A5D-49C3-9F77-89FDD302BCA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73B833F3-1A5D-49C3-9F77-89FDD302BCA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73B833F3-1A5D-49C3-9F77-89FDD302BCA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73B833F3-1A5D-49C3-9F77-89FDD302BCA8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E6BBFF6F-4BBC-4954-A0CE-BB1D7D1FD0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E6BBFF6F-4BBC-4954-A0CE-BB1D7D1FD0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6BBFF6F-4BBC-4954-A0CE-BB1D7D1FD0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +45,12 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6BBFF6F-4BBC-4954-A0CE-BB1D7D1FD0F4} = {BADE2592-2DAB-413D-B57B-74A9864ADA7E}
+		{842DA308-073E-45DD-9CC4-94EB803F8FCF} = {BADE2592-2DAB-413D-B57B-74A9864ADA7E}
+		{9C375A05-061A-4AB5-A8E0-707F6B26F246} = {BADE2592-2DAB-413D-B57B-74A9864ADA7E}
+		{AFF002C3-1398-4B47-BA81-2D7CCE5810E7} = {BADE2592-2DAB-413D-B57B-74A9864ADA7E}
+		{DA007106-3DBF-4FA6-887F-D9CF65BAFFC2} = {BADE2592-2DAB-413D-B57B-74A9864ADA7E}
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {147453B1-21BB-489C-944C-AF22FA964E2F}
 	EndGlobalSection
