@@ -22,4 +22,8 @@
     <Folder Include="Context\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Anjos.Domain\Anjos.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
