@@ -12,9 +12,9 @@ public class ContaPagarEntity
 
     [Key]
     public int Id { get; set; }
-    public int EntradaId { get; set; }
     public decimal Valor { get; set; }
     public int QuantidadeParcelas { get; set; }
+    public int EntradaId { get; set; }
 
     [ForeignKey("EntradaId")]
     public virtual EntradaEntity Entrada { get; set; }

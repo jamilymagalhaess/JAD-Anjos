@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Anjos.Domain.Entities;
@@ -16,8 +17,8 @@ public class ParcelaEntity
     public int Numero { get; set; }
     public decimal Valor { get; set; }
     public decimal Juros { get; set; }
-    public int ContaPagarId { get; set; }
     public DateTime DataVencimento { get; set; }
+    public int ContaPagarId { get; set; }
     public int ContaReceberId { get; set; }
 
     [ForeignKey("ContaPagarId")]
