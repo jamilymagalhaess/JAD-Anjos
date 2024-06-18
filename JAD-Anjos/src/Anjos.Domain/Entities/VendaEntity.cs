@@ -16,7 +16,8 @@ public class VendaEntity
     public DateTime DataVenda { get; set; }
     public DateTime DataInclusao { get; set; }
     public string FormaPagamento { get; set; }
+
     public virtual ICollection<ContaReceberEntity> ContaReceber { get; set; }
-    public virtual ICollection<VendaProdutoEntity> VendaProdutos{ get; set; }
+    public virtual ICollection<VendaProdutoEntity> VendaProduto{ get; set; }
 
 }
