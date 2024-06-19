@@ -1,4 +1,4 @@
-﻿namespace Anjos.Model.Entrada;
+﻿namespace Anjos.Model.Entities.Entrada;
 
 public class Entrada
 {

@@ -1,4 +1,4 @@
-﻿namespace Anjos.Model.Categoria;
+﻿namespace Anjos.Model.Entities.Categoria;
 
 public class Categoria
 {

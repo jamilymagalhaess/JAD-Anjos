@@ -1,4 +1,4 @@
-﻿namespace Anjos.Model.Venda;
+﻿namespace Anjos.Model.Entities.Venda;
 
 public class Venda
 {

@@ -1,4 +1,4 @@
-﻿namespace Anjos.Model.Conta;
+﻿namespace Anjos.Model.Entities.Conta;
 
 public class ContaPagar
 {
