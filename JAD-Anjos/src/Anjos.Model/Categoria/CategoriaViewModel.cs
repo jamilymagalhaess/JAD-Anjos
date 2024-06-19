@@ -1,6 +1,6 @@
 ﻿namespace Anjos.Model.Entities.Categoria;
 
-public class Categoria
+public class CategoriaViewModel
 {
     public int Id { get; set; }
     public string Nome { get; set; }

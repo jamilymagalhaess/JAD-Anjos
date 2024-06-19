@@ -1,5 +1,5 @@
 ﻿namespace Anjos.Model.Entities.Conta;
-public class ContaReceber
+public class ContaReceberViewModel
 {
     public int Id { get; set; }
     public int VendaId { get; set; }

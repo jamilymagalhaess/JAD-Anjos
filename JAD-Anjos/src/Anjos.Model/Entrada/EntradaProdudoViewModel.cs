@@ -1,6 +1,6 @@
 ﻿namespace Anjos.Model.Entities.Entrada;
 
-public class EntradaProduto
+public class EntradaProdutoViewModel
 {
     public int Id { get; set; }
     public int EntradaId { get; set; }

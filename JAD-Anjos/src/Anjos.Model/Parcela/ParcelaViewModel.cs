@@ -1,6 +1,6 @@
 ﻿namespace Anjos.Model.Entities.Parcela;
 
-public class Parcela
+public class ParcelaViewModel
 {
     public int Id { get; set; }
     public int Tipo { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace Anjos.Model.Entities.Conta;
 
-public class ContaPagar
+public class ContaPagarViewModel
 {
     public int Id { get; set; }
     public int EntradaId { get; set; }

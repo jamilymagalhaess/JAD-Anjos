@@ -1,6 +1,6 @@
 ﻿namespace Anjos.Model.Entities.Venda;
 
-public class Venda
+public class VendaViewModel
 {
     public int Id { get; set; }
     public decimal Valor { get; set; }
