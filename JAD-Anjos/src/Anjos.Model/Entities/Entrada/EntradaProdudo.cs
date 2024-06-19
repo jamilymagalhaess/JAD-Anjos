@@ -1,4 +1,4 @@
-﻿namespace Anjos.Model.Entities.Entrada;
+﻿namespace Anjos.Model.Entities;
 
 public class EntradaProduto
 {

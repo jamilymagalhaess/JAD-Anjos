@@ -1,4 +1,4 @@
-﻿namespace Anjos.Model.Entities.Produto;
+﻿namespace Anjos.Model.Entities;
 
 public class Produto
 {

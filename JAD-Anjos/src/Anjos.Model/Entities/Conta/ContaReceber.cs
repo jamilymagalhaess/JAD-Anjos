@@ -1,4 +1,4 @@
-﻿namespace Anjos.Model.Entities.Conta;
+﻿namespace Anjos.Model.Entities;
 public class ContaReceber
 {
     public int Id { get; set; }
