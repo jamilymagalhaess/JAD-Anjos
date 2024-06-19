@@ -1,21 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Anjos.Model.Entities;
-
 
 namespace Anjos.Database.Context;
 
 public class AnjosContext : DbContext
 {
-    public DbSet<Categoria> Categorias { get; set; }
-    public DbSet<Produto> Produto { get; set; }
-    public DbSet<Parcela> Parcela { get; set; }
-    public DbSet<Entrada> Entrada { get; set; }
-    public DbSet<EntradaProduto> EntradaProduto { get; set; }
-    public DbSet<ContaPagar> ContaPagar { get; set; }
-    public DbSet<ContaReceber> ContaReceber { get; set; }
-    public DbSet<Venda> Venda { get; set; }
-    public DbSet<VendaProduto>VendaProduto { get; set; }
-
     public AnjosContext(DbContextOptions<AnjosContext> options) : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder builder)
