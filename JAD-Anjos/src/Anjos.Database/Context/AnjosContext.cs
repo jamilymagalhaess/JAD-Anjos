@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Anjos.Model.Entities.Entrada;
-using Anjos.Model.Entities.Parcela;
-using Anjos.Model.Entities.Produto;
-using Anjos.Model.Entities.Venda;
-using Anjos.Model.Entities.Conta;
-using Anjos.Model.Entities.Categoria;
+using Anjos.Model.Entities;
 
 
 namespace Anjos.Database.Context;
