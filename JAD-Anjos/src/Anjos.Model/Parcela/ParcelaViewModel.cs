@@ -1,4 +1,4 @@
-﻿namespace Anjos.Model.Entities.Parcela;
+﻿namespace Anjos.Model.Parcela;
 
 public class ParcelaViewModel
 {
