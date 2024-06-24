@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Anjos.Database.Mapping;
 
-public class VendaProdutoMapping : IEntityTypeConfiguration<VendaProdutoEntity>
+public class VendaProdutoMapping : IEntityTypeConfiguration<VendaProduto>
 {
-    public void Configure(EntityTypeBuilder<VendaProdutoEntity> builder)
+    public void Configure(EntityTypeBuilder<VendaProduto> builder)
     {
         builder.ToTable("VendaProduto", "dbo");
 

@@ -4,9 +4,9 @@ using Anjos.Domain.Entities;
 
 namespace Anjos.Database.Mapping;
 
-public class CategoriaMapping : IEntityTypeConfiguration<CategoriaEntity>
+public class CategoriaMapping : IEntityTypeConfiguration<Categoria>
 {
-    public void Configure(EntityTypeBuilder<CategoriaEntity> builder)
+    public void Configure(EntityTypeBuilder<Categoria> builder)
     {
         builder.ToTable("Categoria", "dbo");
 

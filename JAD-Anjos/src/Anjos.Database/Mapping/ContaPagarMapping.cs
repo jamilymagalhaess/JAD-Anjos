@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Anjos.Database.Mapping;
 
-public class ContaPagarMapping : IEntityTypeConfiguration<ContaPagarEntity>
+public class ContaPagarMapping : IEntityTypeConfiguration<ContaPagar>
 {
-    public void Configure(EntityTypeBuilder<ContaPagarEntity> builder)
+    public void Configure(EntityTypeBuilder<ContaPagar> builder)
     {
         builder.ToTable("ContaPagar", "dbo");
 

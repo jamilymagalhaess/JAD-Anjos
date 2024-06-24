@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace Anjos.Database.Mapping;
 
 
-public class ParcelaMapping : IEntityTypeConfiguration<ParcelaEntity>
+public class ParcelaMapping : IEntityTypeConfiguration<Parcela>
 {
-    public void Configure(EntityTypeBuilder<ParcelaEntity> builder)
+    public void Configure(EntityTypeBuilder<Parcela> builder)
     {
         builder.ToTable("Parcela", "dbo");
 
