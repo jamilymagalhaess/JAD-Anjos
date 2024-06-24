@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Anjos.Domain.Entities;
 
-public class ContaReceberEntity
+public class ContaReceber
 {
-    public ContaReceberEntity()
+    public ContaReceber()
     {
         
     }
@@ -16,7 +16,7 @@ public class ContaReceberEntity
     public decimal Valor { get; set; }
     public int VendaId { get; set; }
 
-    public virtual VendaEntity Venda { get; set; }
-    public virtual ICollection<ParcelaEntity> Parcela { get; set; }
+    public virtual Venda Venda { get; set; }
+    public virtual ICollection<Parcela> Parcela { get; set; }
 
 }

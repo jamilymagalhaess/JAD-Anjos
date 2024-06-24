@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Anjos.Domain.Entities;
 
-public class VendaProdutoEntity
+public class VendaProduto
 {
-    public VendaProdutoEntity()
+    public VendaProduto()
     {
         
     }
@@ -18,8 +18,8 @@ public class VendaProdutoEntity
     public int ProdutoId { get; set; }
 
     [ForeignKey("VendaId")]
-    public virtual VendaEntity Venda { get; set; }
+    public virtual Venda Venda { get; set; }
     [ForeignKey("ProdutoId")]
-    public virtual ProdutoEntity Produto { get; set; }
+    public virtual Produto Produto { get; set; }
 
 }

@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using Anjos.Database.Repositories.Entity;
 
 namespace Anjos.Domain.Entities;
 
-public class VendaEntity
+public class Venda : IEntity
 {
-    public VendaEntity()
+    public Venda()
     {
         
     }
@@ -17,7 +17,7 @@ public class VendaEntity
     public DateTime DataInclusao { get; set; }
     public string FormaPagamento { get; set; }
 
-    public virtual ICollection<ContaReceberEntity> ContaReceber { get; set; }
-    public virtual ICollection<VendaProdutoEntity> VendaProduto{ get; set; }
+    public virtual ICollection<ContaReceber> ContaReceber { get; set; }
+    public virtual ICollection<VendaProduto> VendaProduto{ get; set; }
 
 }

@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Anjos.Domain.Entities;
 
-public class ParcelaEntity
+public class Parcela
 {
-    public ParcelaEntity()
+    public Parcela()
     {
         
     }
@@ -22,8 +22,8 @@ public class ParcelaEntity
     public int ContaReceberId { get; set; }
 
     [ForeignKey("ContaPagarId")]
-    public virtual ContaPagarEntity ContaPagar { get; set; }
+    public virtual ContaPagar ContaPagar { get; set; }
     [ForeignKey("ContaReceberId")]
-    public virtual ContaReceberEntity ContaReceber { get; set; }
+    public virtual ContaReceber ContaReceber { get; set; }
 
 }
