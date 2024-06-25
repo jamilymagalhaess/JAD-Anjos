@@ -1,11 +1,24 @@
+using Anjos.API.Configuration;
+using Anjos.Database.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+string? mySQLConnection = builder.Configuration.GetConnectionString("DefaultConnection");
+if (string.IsNullOrEmpty(mySQLConnection))
+{
+    throw new InvalidOperationException("A conexão com o banco de dados não foi configurada corretamente.");
+}
+
+builder.Services.AddDbContext<AnjosContext>(options =>
+    options.UseSqlServer(mySQLConnection));
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDependencyInjectionConfiguration();
 
 var app = builder.Build();
 
