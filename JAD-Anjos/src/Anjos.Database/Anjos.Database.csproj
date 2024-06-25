@@ -20,12 +20,14 @@
 
   <ItemGroup>
     <Folder Include="Context\" />
+  	<Folder Include="Mapping\" />
+    <Folder Include="Repositories\" />
+  	<Folder Include="Repositories\Produto\" />
+	  
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Anjos.Application\Anjos.Application.csproj" />
     <ProjectReference Include="..\Anjos.Domain\Anjos.Domain.csproj" />
-    <ProjectReference Include="..\Anjos.Model\Anjos.Model.csproj" />
   </ItemGroup>
-
+ 
 </Project>
