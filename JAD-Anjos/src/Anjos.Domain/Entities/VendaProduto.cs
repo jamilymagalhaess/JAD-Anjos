@@ -3,12 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Anjos.Domain.Entities;
 
-public class VendaProduto
+public class VendaProduto 
 {
-    public VendaProduto()
-    {
-        
-    }
 
     [Key]
     public int Id { get; set; }
@@ -18,8 +14,8 @@ public class VendaProduto
     public int ProdutoId { get; set; }
 
     [ForeignKey("VendaId")]
-    public virtual Venda Venda { get; set; }
+    public virtual Venda? Venda { get; set; }
     [ForeignKey("ProdutoId")]
-    public virtual Produto Produto { get; set; }
+    public virtual Produto? Produto { get; set; }
 
 }

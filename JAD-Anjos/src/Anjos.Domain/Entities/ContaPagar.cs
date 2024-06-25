@@ -1,14 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Anjos.Domain.Entities;
 
 public class ContaPagar
 {
-    public ContaPagar()
-    {
-        
-    }
 
     [Key]
     public int Id { get; set; }
@@ -17,7 +14,6 @@ public class ContaPagar
     public int EntradaId { get; set; }
 
     [ForeignKey("EntradaId")]
-    public virtual Entrada Entrada { get; set; }
-    public virtual ICollection<Parcela> Parcela { get; set; }
+    public virtual Entrada? Entrada { get; set; }
+    public virtual ICollection<Parcela?> Parcela { get; set; } 
 }
-

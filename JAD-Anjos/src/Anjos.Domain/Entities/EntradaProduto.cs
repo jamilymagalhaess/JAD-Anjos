@@ -5,11 +5,6 @@ namespace Anjos.Domain.Entities;
 
 public class EntradaProduto
 {
-    public EntradaProduto()
-    {
-        
-    }
-
     [Key]
     public int Id { get; set; }
     public int Quantidade { get; set; }
@@ -20,8 +15,8 @@ public class EntradaProduto
     public int ProdutoId { get; set; }
 
     [ForeignKey("EntradaId")]
-    public virtual Entrada Entrada { get; set; }
+    public virtual Entrada? Entrada { get; set; }
     [ForeignKey("ProdutoId")]
-    public virtual Produto Produto { get; set; }
+    public virtual Produto? Produto { get; set; }
 
 }
