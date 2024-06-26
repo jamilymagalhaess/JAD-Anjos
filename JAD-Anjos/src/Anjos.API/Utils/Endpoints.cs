@@ -18,7 +18,7 @@ public static class Endpoints
     public static class Produto
     {
         public const string ObterProduto = "obter-produto";
-        public const string ConsultarProdutos = "consultar-produtos";
+        public const string ObterPaginado = "Obter-paginado";
 
     }
 }
