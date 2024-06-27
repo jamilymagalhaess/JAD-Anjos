@@ -2,6 +2,7 @@
 using Anjos.Application.Interfaces;
 using Anjos.Domain.Entities;
 using Anjos.Domain.Dto;
+using Microsoft.EntityFrameworkCore;
 
 namespace Anjos.Application.Services;
 
@@ -16,7 +17,10 @@ public class ProdutoService : IProdutoService
 
     public async Task<Produto?> ObterByIdAsync(int id)
     {
-        return await _produtoRepository.ObterByIdAsync(id);
+            var produto = await _produtoRepository.ObterByIdAsync(id);
+            if (produto == null) throw new KeyNotFoundException($"Produto com ID {id} não encontrado.");
+
+            return produto; 
     }
 
    public async Task<PaginacaoResultado> ObterPaginadoComTotalAsync(Paginacao dto)

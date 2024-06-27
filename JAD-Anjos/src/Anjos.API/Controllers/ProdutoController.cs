@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using static Anjos.API.Utils.Endpoints;
 using Anjos.Domain.Dto;
 using System.Net;
+using Anjos.API.Utils;
 
 namespace Anjos.API.Controllers;
 
@@ -16,18 +17,34 @@ public class ProdutoController : ControllerBase
         _produtoService = produtoService;
     }
 
-    /*[HttpGet]
+    [HttpGet]
     [Route(Produto.ObterProduto)]
-    [ProducesResponseType(typeof(Produto), (int)HttpStatusCode.OK)]
-    [ProducesResponseType(typeof(Produto), (int)HttpStatusCode.NotFound)]
-    public async Task<IActionResult> Get([FromQuery] int id) => await _produtoService.ObterByIdAsync(id).Resultado();*/
+    public async Task<IActionResult> Get(int id)
+    {
+        try
+        {
+            var produto = await _produtoService.ObterByIdAsync(id);
+            return Ok(produto);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 
 
     [HttpGet]
     [Route(Produto.ObterPaginado)]
-    [ProducesResponseType(typeof(PaginacaoResultado), (int)HttpStatusCode.OK)]
-    [ProducesResponseType(typeof(PaginacaoResultado), (int)HttpStatusCode.NotFound)]
-    public Task<PaginacaoResultado> GetProdutos([FromQuery] Paginacao dto) => _produtoService.ObterPaginadoComTotalAsync(dto);
-
-        
+    public async Task<IActionResult> GetProdutos([FromQuery] Paginacao dto)
+    {
+        try
+        {
+            var resultado = await _produtoService.ObterPaginadoComTotalAsync(dto);
+            return Ok(resultado);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
 }
