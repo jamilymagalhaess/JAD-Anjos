@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jamily\\Desktop\\PROJETOS PESSOAIS\\JAD-Anjos\\src\\Anjos.API\\Anjos.API.csproj": {}
+    "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.API\\Anjos.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jamily\\Desktop\\PROJETOS PESSOAIS\\JAD-Anjos\\src\\Anjos.API\\Anjos.API.csproj": {
+    "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.API\\Anjos.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jamily\\Desktop\\PROJETOS PESSOAIS\\JAD-Anjos\\src\\Anjos.API\\Anjos.API.csproj",
+        "projectUniqueName": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.API\\Anjos.API.csproj",
         "projectName": "Anjos.API",
-        "projectPath": "C:\\Users\\Jamily\\Desktop\\PROJETOS PESSOAIS\\JAD-Anjos\\src\\Anjos.API\\Anjos.API.csproj",
-        "packagesPath": "C:\\Users\\Jamily\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jamily\\Desktop\\PROJETOS PESSOAIS\\JAD-Anjos\\src\\Anjos.API\\obj\\",
+        "projectPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.API\\Anjos.API.csproj",
+        "packagesPath": "C:\\Users\\51667\\.nuget\\packages\\",
+        "outputPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jamily\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\51667\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,7 +28,298 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://nexus3.tjmt.jus.br/repository/nuget/": {},
+          "https://nuget.tjmt.jus.br/repository/nuget": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Application\\Anjos.Application.csproj": {
+                "projectPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Application\\Anjos.Application.csproj"
+              },
+              "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\Anjos.Domain.csproj": {
+                "projectPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\Anjos.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Application\\Anjos.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Application\\Anjos.Application.csproj",
+        "projectName": "Anjos.Application",
+        "projectPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Application\\Anjos.Application.csproj",
+        "packagesPath": "C:\\Users\\51667\\.nuget\\packages\\",
+        "outputPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\51667\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://nexus3.tjmt.jus.br/repository/nuget/": {},
+          "https://nuget.tjmt.jus.br/repository/nuget": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Database\\Anjos.Database.csproj": {
+                "projectPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Database\\Anjos.Database.csproj"
+              },
+              "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\Anjos.Domain.csproj": {
+                "projectPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\Anjos.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Database\\Anjos.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Database\\Anjos.Database.csproj",
+        "projectName": "Anjos.Database",
+        "projectPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Database\\Anjos.Database.csproj",
+        "packagesPath": "C:\\Users\\51667\\.nuget\\packages\\",
+        "outputPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\51667\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://nexus3.tjmt.jus.br/repository/nuget/": {},
+          "https://nuget.tjmt.jus.br/repository/nuget": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\Anjos.Domain.csproj": {
+                "projectPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\Anjos.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\Anjos.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\Anjos.Domain.csproj",
+        "projectName": "Anjos.Domain",
+        "projectPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\Anjos.Domain.csproj",
+        "packagesPath": "C:\\Users\\51667\\.nuget\\packages\\",
+        "outputPath": "C:\\PROJETOS\\PROJETOS PESSOAIS\\JAD-Anjos\\JAD-Anjos\\src\\Anjos.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\51667\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://nexus3.tjmt.jus.br/repository/nuget/": {},
+          "https://nuget.tjmt.jus.br/repository/nuget": {}
         },
         "frameworks": {
           "net8.0": {
@@ -50,9 +342,27 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
@@ -67,14 +377,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
