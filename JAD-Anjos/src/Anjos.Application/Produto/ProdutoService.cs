@@ -47,5 +47,19 @@ public class ProdutoService : IProdutoService
         return result;
     }
 
+    public async Task<Produto> AdicionarProdutoAsync(Produto dto)
+    {
+        if (string.IsNullOrEmpty(dto.Nome)) throw new ArgumentException("É necessário informar o nome do produto");
+        if (string.IsNullOrEmpty(dto.Descricao)) throw new ArgumentException("É necessário informar a descrição do produto.");
+        if (dto.CategoriaId <= 0) throw new ArgumentException("É necessário vincular o produto a uma categoria");
 
+        var produtoAdicionado = await _produtoRepository.Adicionar(dto);
+
+        if (produtoAdicionado == null) throw new Exception("Erro ao adicionar o produto.");
+        
+        return produtoAdicionado;
+    }
 }
+
+
+

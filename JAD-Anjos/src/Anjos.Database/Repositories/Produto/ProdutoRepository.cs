@@ -4,6 +4,7 @@ using System;
 using Anjos.Domain.Dto;
 using System.Linq.Expressions;
 using Anjos.Database.Repositories.Base;
+using Anjos.Domain.Entities;
 
 namespace Anjos.Database.Repositories.Produto;
 

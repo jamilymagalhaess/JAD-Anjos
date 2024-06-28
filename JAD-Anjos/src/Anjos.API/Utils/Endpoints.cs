@@ -19,6 +19,7 @@ public static class Endpoints
     {
         public const string ObterProduto = "obter-produto/{id:int}";
         public const string ObterPaginado = "Obter-paginado";
+        public const string CadastrarProduto = "Cadastrar-produto";
 
     }
 }

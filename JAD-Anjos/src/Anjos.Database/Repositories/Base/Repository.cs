@@ -15,10 +15,11 @@ namespace Anjos.Database.Repositories.Base
             _context = context;
         }
 
-        public virtual async Task Adicionar(TEntity entidade)
+        public virtual async Task<TEntity> Adicionar(TEntity entidade)
         {
-            await _context.AddAsync(entidade);
+            var entity = await _context.AddAsync(entidade);
             await _context.SaveChangesAsync();
+            return entity.Entity;
         }
 
         public virtual async Task Remover(TEntity entidade)

@@ -47,4 +47,20 @@ public class ProdutoController : ControllerBase
             return BadRequest(ex.Message);
         }
     }
+
+    [HttpGet]
+    [Route(Produto.CadastrarProduto)]
+    public async Task<IActionResult> AdicionarProduto([FromQuery] Domain.Entities.Produto produto)
+    {
+        try
+        {
+            var resultado = await _produtoService.AdicionarProdutoAsync(produto);
+            return Ok(resultado);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
 }

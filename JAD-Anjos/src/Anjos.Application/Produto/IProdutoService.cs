@@ -8,4 +8,5 @@ public interface IProdutoService
 {
     Task<Produto?> ObterByIdAsync(int id);
     Task<PaginacaoResultado> ObterPaginadoComTotalAsync(Paginacao dto);
+    Task<Produto> AdicionarProdutoAsync(Produto dto);
 }
