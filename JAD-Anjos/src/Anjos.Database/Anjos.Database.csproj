@@ -21,7 +21,6 @@
   <ItemGroup>
     <Folder Include="Context\" />
   	<Folder Include="Mapping\" />
-    <Folder Include="Repositories\" />
   	<Folder Include="Repositories\Produto\" />
 	  
   </ItemGroup>

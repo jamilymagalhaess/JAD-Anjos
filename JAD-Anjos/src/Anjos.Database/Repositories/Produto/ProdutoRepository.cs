@@ -2,6 +2,8 @@
 using Anjos.Database.Context;
 using System;
 using Anjos.Domain.Dto;
+using System.Linq.Expressions;
+using Anjos.Database.Repositories.Base;
 
 namespace Anjos.Database.Repositories.Produto;
 
@@ -29,41 +31,25 @@ public class ProdutoRepository : Repository<Domain.Entities.Produto>, IProdutoRe
 
     public async Task<IEnumerable<Domain.Entities.Produto>> ObterPaginadoAsync(Paginacao dto)
     {
-        var query = _context.Produto.AsQueryable();
+        var query = _context.Set<Domain.Entities.Produto>().AsQueryable();
 
         if (dto.Filtro.HasValue)
         {
             query = query.Where(p => p.CategoriaId == dto.Filtro.Value);
         }
 
-        query = AplicarOrdenacao(query, dto.Ordenacao, dto.DirecaoDaOrdenacao);
-
-        return await query.Skip((dto.Pagina - 1) * dto.Itens).Take(dto.Itens).ToListAsync();
-    }
-
-
-    public IQueryable<Domain.Entities.Produto> AplicarOrdenacao( IQueryable<Domain.Entities.Produto> query, string ordenacao, string direcaoDaOrdenacao)
-    {
-        switch (ordenacao.ToLower())
+        var orderByMappings = new Dictionary<string, Expression<Func<Domain.Entities.Produto, object>>>
         {
-            case "descricao":
-                query = direcaoDaOrdenacao.ToLower() == "desc" ? query.OrderByDescending(p => p.Descricao) : query.OrderBy(p => p.Descricao);
-                break;
-            case "quantidade":
-                query = direcaoDaOrdenacao.ToLower() == "desc" ? query.OrderByDescending(p => p.Quantidade) : query.OrderBy(p => p.Quantidade);
-                break;
-            case "valor":
-                query = direcaoDaOrdenacao.ToLower() == "desc" ? query.OrderByDescending(p => p.Valor) : query.OrderBy(p => p.Valor);
-                break;
-            case "id":
-                query = direcaoDaOrdenacao.ToLower() == "desc" ? query.OrderByDescending(p => p.Id) : query.OrderBy(p => p.Id);     
-                break;
-            default:
-                query = direcaoDaOrdenacao.ToLower() == "desc" ? query.OrderByDescending(p => p.Nome) : query.OrderBy(p => p.Nome);
-                break;
-        }
-        return query;
-    }
+            { "descricao", p => p.Descricao },
+            { "quantidade", p => p.Quantidade },
+            { "valor", p => p.Valor },
+            { "id", p => p.Id },
+            { "nome", p => p.Nome }
+        };
 
+        query = AplicarOrdenacao(query, dto.Ordenacao, dto.DirecaoDaOrdenacao, orderByMappings);
+
+        return await ObterPaginadoAsync(query, dto.Pagina, dto.Itens);
+    }
 
 }
