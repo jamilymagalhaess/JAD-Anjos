@@ -1,8 +1,6 @@
-﻿using Anjos.Domain.Entities;
+﻿namespace Anjos.Domain.Dto;
 
-namespace Anjos.Domain.Dto;
-
-public class Paginacao
+public class PaginacaoDto
 {
     public int Pagina { get; set; }
     public int Itens { get; set; }

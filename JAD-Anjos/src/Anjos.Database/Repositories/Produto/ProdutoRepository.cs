@@ -1,19 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Anjos.Database.Context;
-using System;
+using Anjos.Domain.Entities;
 using Anjos.Domain.Dto;
 using System.Linq.Expressions;
 using Anjos.Database.Repositories.Base;
-using Anjos.Domain.Entities;
 
-namespace Anjos.Database.Repositories.Produto;
+namespace Anjos.Database.Repositories;
 
-public class ProdutoRepository : Repository<Domain.Entities.Produto>, IProdutoRepository
+public class ProdutoRepository : Repository<Produto>, IProdutoRepository
 {
     public ProdutoRepository(AnjosContext context) : base(context)
     {
     }
-    public async Task<Domain.Entities.Produto?> ObterByIdAsync(int id)
+    public async Task<Produto?> ObterByIdAsync(int id)
     {
         return await _context.Produto.FindAsync(id);
     }
@@ -29,17 +28,27 @@ public class ProdutoRepository : Repository<Domain.Entities.Produto>, IProdutoRe
 
         return await query.CountAsync();
     }
-
-    public async Task<IEnumerable<Domain.Entities.Produto>> ObterPaginadoAsync(Paginacao dto)
+    public async Task Atualizar(Produto produto)
     {
-        var query = _context.Set<Domain.Entities.Produto>().AsQueryable();
+        _context.Produto.Update(produto);
+        await _context.SaveChangesAsync();
+    }
+    public async Task Deletar(Produto produto)
+    {
+        _context.Produto.Remove(produto);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<IEnumerable<Produto>> ObterPaginadoAsync(PaginacaoDto dto)
+    {
+        var query = _context.Set<Produto>().AsQueryable();
 
         if (dto.Filtro.HasValue)
         {
             query = query.Where(p => p.CategoriaId == dto.Filtro.Value);
         }
 
-        var orderByMappings = new Dictionary<string, Expression<Func<Domain.Entities.Produto, object>>>
+        var orderByMappings = new Dictionary<string, Expression<Func<Produto, object>>>
         {
             { "descricao", p => p.Descricao },
             { "quantidade", p => p.Quantidade },

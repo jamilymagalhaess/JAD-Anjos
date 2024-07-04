@@ -2,8 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using static Anjos.API.Utils.Endpoints;
 using Anjos.Domain.Dto;
-using System.Net;
-using Anjos.API.Utils;
+using Anjos.Domain.Entities;
 
 namespace Anjos.API.Controllers;
 
@@ -18,7 +17,7 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpGet]
-    [Route(Produto.ObterProduto)]
+    [Route(ProdutoApi.ObterProduto)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -32,10 +31,9 @@ public class ProdutoController : ControllerBase
         }
     }
 
-
     [HttpGet]
-    [Route(Produto.ObterPaginado)]
-    public async Task<IActionResult> GetProdutos([FromQuery] Paginacao dto)
+    [Route(ProdutoApi.ObterPaginado)]
+    public async Task<IActionResult> GetProdutos([FromBody] PaginacaoDto dto)
     {
         try
         {
@@ -49,8 +47,8 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpGet]
-    [Route(Produto.CadastrarProduto)]
-    public async Task<IActionResult> AdicionarProduto([FromQuery] Domain.Entities.Produto produto)
+    [Route(ProdutoApi.CadastrarProduto)]
+    public async Task<IActionResult> AdicionarProduto([FromBody] Produto produto)
     {
         try
         {
@@ -62,5 +60,37 @@ public class ProdutoController : ControllerBase
             return BadRequest(ex.Message);
         }
     }
+
+    [HttpPut]
+    [Route(ProdutoApi.AtualizarProduto)]
+    public async Task<IActionResult> AtualizarProduto([FromBody] Produto produto)
+    {
+        try
+        {
+            var resultado = await _produtoService.AtualizarProdutoAsync(produto);
+            return Ok(resultado);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [HttpDelete]
+    [Route(ProdutoApi.DeletarProduto)]
+    public async Task<IActionResult> DeletarProduto(int id)
+    {
+        try
+        {
+            await _produtoService.DeletarProdutoAsync(id);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+
 
 }

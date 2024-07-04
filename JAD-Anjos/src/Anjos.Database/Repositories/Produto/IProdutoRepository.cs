@@ -1,11 +1,13 @@
 ﻿using Anjos.Database.Repositories.Base;
 using Anjos.Domain.Dto;
+using ProdutoEntity = Anjos.Domain.Entities.Produto;
 
-namespace Anjos.Database.Repositories.Produto;
-
-public interface IProdutoRepository : IRepository<Domain.Entities.Produto>
+namespace Anjos.Database.Repositories;
+public interface IProdutoRepository : IRepository<ProdutoEntity>
 {
-    Task<Domain.Entities.Produto?> ObterByIdAsync(int id);
+    Task<ProdutoEntity?> ObterByIdAsync(int id);
     Task<int> ObterTotalProdutosAsync(int? filter);
-    Task<IEnumerable<Domain.Entities.Produto>> ObterPaginadoAsync(Paginacao dto);
+    Task Atualizar(ProdutoEntity produto);
+    Task Deletar(ProdutoEntity produto);
+    Task<IEnumerable<ProdutoEntity>> ObterPaginadoAsync(PaginacaoDto dto);
 }

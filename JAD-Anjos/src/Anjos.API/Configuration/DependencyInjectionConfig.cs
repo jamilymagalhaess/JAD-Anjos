@@ -1,7 +1,7 @@
 ﻿// DependencyInjectionConfig.cs
 using Anjos.Application.Interfaces;
 using Anjos.Application.Services;
-using Anjos.Database.Repositories.Produto;
+using Anjos.Database.Repositories;
 
 namespace Anjos.API.Configuration;
 
@@ -13,20 +13,30 @@ public static class DependencyInjectionConfig
 
         AddRepositories(services);
         AddServices(services);
-        AddFactories(services);
     }
     private static void AddRepositories(IServiceCollection services)
     {
         services.AddScoped<IProdutoRepository, ProdutoRepository>();
+        services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+        services.AddScoped<IEntradaRepository, EntradaRepository>();
+        services.AddScoped<IEntradaProdutoRepository, EntradaProdutoRepository>();
+        services.AddScoped<IParcelaRepository, ParcelaRepository>();
+        services.AddScoped<IVendaRepository, VendaRepository>();
+        services.AddScoped<IVendaProdutoRepository, VendaProdutoRepository>();
+        services.AddScoped<IContaPagarRepository, ContaPagarRepository>();
+        services.AddScoped<IContaReceberRepository, ContaReceberRepository>();
     }
 
     private static void AddServices(IServiceCollection services)
     {
         services.AddScoped<IProdutoService, ProdutoService>();
-    }
-
-    private static void AddFactories(IServiceCollection services)
-    {
-        // factory
+        services.AddScoped<ICategoriaService, CategoriaService>();
+        services.AddScoped<IEntradaRepository, EntradaRepository>();
+        services.AddScoped<IEntradaProdutoRepository, EntradaProdutoRepository>();
+        services.AddScoped<IParcelaRepository, ParcelaRepository>();
+        services.AddScoped<IVendaRepository, VendaRepository>();
+        services.AddScoped<IVendaProdutoRepository, VendaProdutoRepository>();
+        services.AddScoped<IContaPagarRepository, ContaPagarRepository>();
+        services.AddScoped<IContaReceberRepository, ContaReceberRepository>();
     }
 }
