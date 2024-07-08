@@ -52,8 +52,8 @@ public class VendaController : ControllerBase
     {
         try
         {
-            var resultado = await _vendaService.AdicionarVendaAsync(venda);
-            return CreatedAtAction(nameof(Get), new { id = resultado.Id }, resultado);
+            await _vendaService.AdicionarVendaAsync(venda);
+            return Created();
         }
         catch (Exception ex)
         {
@@ -67,8 +67,8 @@ public class VendaController : ControllerBase
     {
         try
         {
-            var resultado = await _vendaService.AtualizarVendaAsync(venda);
-            return Ok(resultado);
+            await _vendaService.AtualizarVendaAsync(venda);
+            return NoContent();
         }
         catch (Exception ex)
         {
@@ -83,7 +83,7 @@ public class VendaController : ControllerBase
         try
         {
             await _vendaService.DeletarVendaAsync(id);
-            return Ok();
+            return NoContent();
         }
         catch (Exception ex)
         {

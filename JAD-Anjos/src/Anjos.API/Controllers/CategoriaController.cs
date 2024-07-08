@@ -53,7 +53,7 @@ public class CategoriaController : ControllerBase
         try
         {
             var resultado = await _categoriaService.AdicionarCategoriaAsync(categoria);
-            return CreatedAtAction(nameof(Get), new { id = resultado.Id }, resultado); // Return 201 Created
+            return Created();
         }
         catch (Exception ex)
         {
@@ -67,8 +67,8 @@ public class CategoriaController : ControllerBase
     {
         try
         {
-            var resultado = await _categoriaService.AtualizarCategoriaAsync(categoria);
-            return Ok(resultado);
+            await _categoriaService.AtualizarCategoriaAsync(categoria);
+            return NoContent();
         }
         catch (Exception ex)
         {
@@ -83,7 +83,7 @@ public class CategoriaController : ControllerBase
         try
         {
             await _categoriaService.DeletarCategoriaAsync(id);
-            return Ok();
+            return NoContent();
         }
         catch (Exception ex)
         {

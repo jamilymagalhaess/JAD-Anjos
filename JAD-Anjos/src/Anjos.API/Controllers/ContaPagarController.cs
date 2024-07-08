@@ -52,8 +52,8 @@ public class ContaPagarController : ControllerBase
     {
         try
         {
-            var resultado = await _contaPagarService.AdicionarContaPagarAsync(contaPagar);
-            return CreatedAtAction(nameof(Get), new { id = resultado.Id }, resultado);
+            await _contaPagarService.AdicionarContaPagarAsync(contaPagar);
+            return Created();
         }
         catch (Exception ex)
         {
@@ -68,7 +68,7 @@ public class ContaPagarController : ControllerBase
         try
         {
             var resultado = await _contaPagarService.AtualizarContaPagarAsync(contaPagar);
-            return Ok(resultado);
+            return NoContent();
         }
         catch (Exception ex)
         {
@@ -83,7 +83,7 @@ public class ContaPagarController : ControllerBase
         try
         {
             await _contaPagarService.DeletarContaPagarAsync(id);
-            return Ok();
+            return NoContent(); ;
         }
         catch (Exception ex)
         {

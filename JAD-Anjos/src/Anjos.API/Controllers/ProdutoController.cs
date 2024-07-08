@@ -38,7 +38,7 @@ public class ProdutoController : ControllerBase
         try
         {
             var resultado = await _produtoService.ObterPaginadoComTotalAsync(dto);
-            return Ok(resultado);
+            return Ok(resultado); 
         }
         catch (Exception ex)
         {
@@ -52,8 +52,8 @@ public class ProdutoController : ControllerBase
     {
         try
         {
-            var resultado = await _produtoService.AdicionarProdutoAsync(produto);
-            return Ok(resultado);
+            await _produtoService.AdicionarProdutoAsync(produto);
+            return Created();
         }
         catch (Exception ex)
         {
@@ -67,8 +67,8 @@ public class ProdutoController : ControllerBase
     {
         try
         {
-            var resultado = await _produtoService.AtualizarProdutoAsync(produto);
-            return Ok(resultado);
+            await _produtoService.AtualizarProdutoAsync(produto);
+            return NoContent();
         }
         catch (Exception ex)
         {

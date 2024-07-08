@@ -25,10 +25,6 @@ public class EntradaProdutoController : ControllerBase
             var entradaProduto = await _entradaProdutoService.ObterByIdAsync(id);
             return Ok(entradaProduto);
         }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
-        }
         catch (Exception ex)
         {
             return BadRequest(ex.Message);
@@ -57,7 +53,7 @@ public class EntradaProdutoController : ControllerBase
         try
         {
             await _entradaProdutoService.AdicionarEntradaProdutoAsync(entradaProduto);
-            return Ok();
+            return Created();
         }
         catch (Exception ex)
         {
@@ -72,7 +68,7 @@ public class EntradaProdutoController : ControllerBase
         try
         {
             await _entradaProdutoService.AtualizarEntradaProdutoAsync(entradaProduto);
-            return Ok();
+            return NoContent();
         }
         catch (Exception ex)
         {
@@ -87,7 +83,7 @@ public class EntradaProdutoController : ControllerBase
         try
         {
             await _entradaProdutoService.DeletarEntradaProdutoAsync(id);
-            return Ok();
+            return NoContent();
         }
         catch (Exception ex)
         {

@@ -54,8 +54,8 @@ public class EntradaController : ControllerBase
     {
         try
         {
-            var resultado = await _entradaService.AdicionarEntradaAsync(entrada);
-            return CreatedAtAction(nameof(Get), new { id = resultado.Id }, resultado);
+            await _entradaService.AdicionarEntradaAsync(entrada);
+            return Created();
         }
         catch (Exception ex)
         {
@@ -69,8 +69,8 @@ public class EntradaController : ControllerBase
     {
         try
         {
-            var resultado = await _entradaService.AtualizarEntradaAsync(entrada);
-            return Ok(resultado);
+            await _entradaService.AtualizarEntradaAsync(entrada);
+            return NoContent();
         }
         catch (Exception ex)
         {
@@ -85,7 +85,7 @@ public class EntradaController : ControllerBase
         try
         {
             await _entradaService.DeletarEntradaAsync(id);
-            return Ok();
+            return NoContent();
         }
         catch (Exception ex)
         {

@@ -30,10 +30,6 @@ public class ContaReceberController : ControllerBase
             var contaReceber = await _contaReceberService.ObterByIdAsync(id);
             return Ok(contaReceber);
         }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
-        }
         catch (Exception ex)
         {
             return BadRequest(ex.Message);
@@ -61,8 +57,8 @@ public class ContaReceberController : ControllerBase
     {
         try
         {
-            var resultado = await _contaReceberService.AdicionarContaReceberAsync(contaReceber);
-            return CreatedAtAction(nameof(Get), new { id = resultado.Id }, resultado);
+            await _contaReceberService.AdicionarContaReceberAsync(contaReceber);
+            return Created();
         }
         catch (Exception ex)
         {
@@ -77,7 +73,7 @@ public class ContaReceberController : ControllerBase
         try
         {
             var resultado = await _contaReceberService.AtualizarContaReceberAsync(contaReceber);
-            return Ok(resultado);
+            return NoContent();
         }
         catch (Exception ex)
         {
@@ -92,11 +88,7 @@ public class ContaReceberController : ControllerBase
         try
         {
             await _contaReceberService.DeletarContaReceberAsync(id);
-            return Ok();
-        }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
+            return NoContent();
         }
         catch (Exception ex)
         {

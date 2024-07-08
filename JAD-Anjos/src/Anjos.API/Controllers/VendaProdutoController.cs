@@ -25,10 +25,6 @@ public class VendaProdutoController : ControllerBase
             var vendaProduto = await _vendaProdutoService.ObterByIdAsync(id);
             return Ok(vendaProduto);
         }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
-        }
         catch (Exception ex)
         {
             return BadRequest(ex.Message);
@@ -57,7 +53,7 @@ public class VendaProdutoController : ControllerBase
         try
         {
             await _vendaProdutoService.AdicionarVendaProdutoAsync(vendaProdutoDto);
-            return Ok();
+            return Created();
         }
         catch (Exception ex)
         {
@@ -72,7 +68,7 @@ public class VendaProdutoController : ControllerBase
         try
         {
             await _vendaProdutoService.AtualizarVendaProdutoAsync(vendaProdutoDto);
-            return Ok();
+            return NoContent();
         }
         catch (Exception ex)
         {
@@ -87,11 +83,7 @@ public class VendaProdutoController : ControllerBase
         try
         {
             await _vendaProdutoService.DeletarVendaProdutoAsync(id);
-            return Ok();
-        }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
+            return NoContent();
         }
         catch (Exception ex)
         {

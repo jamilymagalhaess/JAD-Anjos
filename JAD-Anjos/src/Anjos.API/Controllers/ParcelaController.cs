@@ -52,8 +52,8 @@ public class ParcelaController : ControllerBase
     {
         try
         {
-            var resultado = await _parcelaService.AdicionarParcelaAsync(parcela);
-            return CreatedAtAction(nameof(Get), new { id = resultado.Id }, resultado);
+            await _parcelaService.AdicionarParcelaAsync(parcela);
+            return Created();
         }
         catch (Exception ex)
         {
@@ -68,7 +68,7 @@ public class ParcelaController : ControllerBase
         try
         {
             var resultado = await _parcelaService.AtualizarParcelaAsync(parcela);
-            return Ok(resultado);
+            return NoContent();
         }
         catch (Exception ex)
         {
@@ -83,7 +83,7 @@ public class ParcelaController : ControllerBase
         try
         {
             await _parcelaService.DeletarParcelaAsync(id);
-            return Ok();
+            return NoContent();
         }
         catch (Exception ex)
         {
