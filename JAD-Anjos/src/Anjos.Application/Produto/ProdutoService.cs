@@ -1,6 +1,7 @@
 ﻿using Anjos.Application.Interfaces;
 using Anjos.Domain.Entities;
 using Anjos.Domain.Dto;
+using Anjos.Database.Repositories;
 
 namespace Anjos.Application.Services;
 

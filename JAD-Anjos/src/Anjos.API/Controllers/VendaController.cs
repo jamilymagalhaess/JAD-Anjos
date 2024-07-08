@@ -17,7 +17,7 @@ public class VendaController : ControllerBase
     }
 
     [HttpGet]
-    [Route(VendaApi.ObterVenda)]
+    [Route(Api.Id)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -32,7 +32,7 @@ public class VendaController : ControllerBase
     }
 
     [HttpGet]
-    [Route(VendaApi.ObterPaginado)]
+    [Route(Api.V1)]
     public async Task<IActionResult> GetVendas([FromQuery] PaginacaoDto dto)
     {
         try
@@ -47,7 +47,7 @@ public class VendaController : ControllerBase
     }
 
     [HttpPost]
-    [Route(VendaApi.CadastrarVenda)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AdicionarVenda([FromBody] VendaDto venda)
     {
         try
@@ -62,7 +62,7 @@ public class VendaController : ControllerBase
     }
 
     [HttpPut]
-    [Route(VendaApi.AtualizarVenda)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AtualizarVenda([FromBody] VendaDto venda)
     {
         try
@@ -77,7 +77,7 @@ public class VendaController : ControllerBase
     }
 
     [HttpDelete]
-    [Route(VendaApi.DeletarVenda)]
+    [Route(Api.Id)]
     public async Task<IActionResult> DeletarVenda(int id)
     {
         try

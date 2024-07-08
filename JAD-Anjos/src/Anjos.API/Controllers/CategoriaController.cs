@@ -17,7 +17,7 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpGet]
-    [Route(CategoriaApi.ObterCategoria)]
+    [Route(Api.Id)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -32,7 +32,7 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpGet]
-    [Route(CategoriaApi.ObterPaginado)]
+    [Route(Api.V1)]
     public async Task<IActionResult> GetCategorias([FromQuery] PaginacaoDto dto)
     {
         try
@@ -47,7 +47,7 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpPost]
-    [Route(CategoriaApi.CadastrarCategoria)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AdicionarCategoria([FromBody] CategoriaDto categoria)
     {
         try
@@ -62,7 +62,7 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpPut]
-    [Route(CategoriaApi.AtualizarCategoria)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AtualizarCategoria([FromBody] CategoriaDto categoria)
     {
         try
@@ -77,7 +77,7 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpDelete]
-    [Route(CategoriaApi.DeletarCategoria)]
+    [Route(Api.Id)]
     public async Task<IActionResult> DeletarCategoria(int id)
     {
         try

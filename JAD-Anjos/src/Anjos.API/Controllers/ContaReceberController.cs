@@ -22,7 +22,7 @@ public class ContaReceberController : ControllerBase
     }
 
     [HttpGet]
-    [Route(ContaReceberApi.ObterContaReceber)]
+    [Route(Api.Id)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -41,7 +41,7 @@ public class ContaReceberController : ControllerBase
     }
 
     [HttpGet]
-    [Route(ContaReceberApi.ObterPaginado)]
+    [Route(Api.V1)]
     public async Task<IActionResult> GetContasReceber([FromQuery] PaginacaoDto dto)
     {
         try
@@ -56,7 +56,7 @@ public class ContaReceberController : ControllerBase
     }
 
     [HttpPost]
-    [Route(ContaReceberApi.CadastrarContaReceber)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AdicionarContaReceber([FromBody] ContaReceberDto contaReceber)
     {
         try
@@ -71,7 +71,7 @@ public class ContaReceberController : ControllerBase
     }
 
     [HttpPut]
-    [Route(ContaReceberApi.AtualizarContaReceber)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AtualizarContaReceber([FromBody] ContaReceberDto contaReceber)
     {
         try
@@ -86,7 +86,7 @@ public class ContaReceberController : ControllerBase
     }
 
     [HttpDelete]
-    [Route(ContaReceberApi.DeletarContaReceber)]
+    [Route(Api.Id)]
     public async Task<IActionResult> DeletarContaReceber(int id)
     {
         try

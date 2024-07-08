@@ -17,7 +17,7 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpGet]
-    [Route(ProdutoApi.ObterProduto)]
+    [Route(Api.Id)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -32,7 +32,7 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpGet]
-    [Route(ProdutoApi.ObterPaginado)]
+    [Route(Api.V1)]
     public async Task<IActionResult> GetProdutos([FromBody] PaginacaoDto dto)
     {
         try
@@ -46,8 +46,8 @@ public class ProdutoController : ControllerBase
         }
     }
 
-    [HttpGet]
-    [Route(ProdutoApi.CadastrarProduto)]
+    [HttpPost]
+    [Route(Api.V1)]
     public async Task<IActionResult> AdicionarProduto([FromBody] Produto produto)
     {
         try
@@ -62,7 +62,7 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpPut]
-    [Route(ProdutoApi.AtualizarProduto)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AtualizarProduto([FromBody] Produto produto)
     {
         try
@@ -77,7 +77,7 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpDelete]
-    [Route(ProdutoApi.DeletarProduto)]
+    [Route(Api.Id)]
     public async Task<IActionResult> DeletarProduto(int id)
     {
         try

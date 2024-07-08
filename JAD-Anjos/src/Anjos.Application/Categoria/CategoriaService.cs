@@ -1,6 +1,7 @@
 ﻿using Anjos.Domain.Entities;
 using Anjos.Domain.Dto;
-using Anjos.Database.Repositories;
+
+using Anjos.Application.Interfaces;
 
 namespace Anjos.Application.Services;
 public class CategoriaService : ICategoriaService

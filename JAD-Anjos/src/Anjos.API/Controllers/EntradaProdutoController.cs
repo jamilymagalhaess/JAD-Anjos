@@ -17,7 +17,7 @@ public class EntradaProdutoController : ControllerBase
     }
 
     [HttpGet]
-    [Route(EntradaProdutoApi.ObterEntradaProduto)]
+    [Route(Api.Id)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -36,7 +36,7 @@ public class EntradaProdutoController : ControllerBase
     }
 
     [HttpGet]
-    [Route(EntradaProdutoApi.ObterPorEntrada)]
+    [Route(Api.V1)]
     public async Task<IActionResult> GetPorEntrada(int entradaId)
     {
         try
@@ -51,7 +51,7 @@ public class EntradaProdutoController : ControllerBase
     }
 
     [HttpPost]
-    [Route(EntradaProdutoApi.AdicionarEntradaProduto)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AdicionarEntradaProduto([FromBody] EntradaProduto entradaProduto)
     {
         try
@@ -66,7 +66,7 @@ public class EntradaProdutoController : ControllerBase
     }
 
     [HttpPut]
-    [Route(EntradaProdutoApi.AtualizarEntradaProduto)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AtualizarEntradaProduto([FromBody] EntradaProduto entradaProduto)
     {
         try
@@ -81,7 +81,7 @@ public class EntradaProdutoController : ControllerBase
     }
 
     [HttpDelete]
-    [Route(EntradaProdutoApi.DeletarEntradaProduto)]
+    [Route(Api.Id)]
     public async Task<IActionResult> DeletarEntradaProduto(int id)
     {
         try

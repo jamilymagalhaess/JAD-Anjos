@@ -17,7 +17,7 @@ public class ContaPagarController : ControllerBase
     }
 
     [HttpGet]
-    [Route(ContaPagarApi.ObterContaPagar)]
+    [Route(Api.Id)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -32,7 +32,7 @@ public class ContaPagarController : ControllerBase
     }
 
     [HttpGet]
-    [Route(ContaPagarApi.ObterPaginado)]
+    [Route(Api.V1)]
     public async Task<IActionResult> GetContasPagar([FromQuery] PaginacaoDto dto)
     {
         try
@@ -47,7 +47,7 @@ public class ContaPagarController : ControllerBase
     }
 
     [HttpPost]
-    [Route(ContaPagarApi.CadastrarContaPagar)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AdicionarContaPagar([FromBody] ContaPagarDto contaPagar)
     {
         try
@@ -62,7 +62,7 @@ public class ContaPagarController : ControllerBase
     }
 
     [HttpPut]
-    [Route(ContaPagarApi.AtualizarContaPagar)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AtualizarContaPagar([FromBody] ContaPagarDto contaPagar)
     {
         try
@@ -77,7 +77,7 @@ public class ContaPagarController : ControllerBase
     }
 
     [HttpDelete]
-    [Route(ContaPagarApi.DeletarContaPagar)]
+    [Route(Api.Id)]
     public async Task<IActionResult> DeletarContaPagar(int id)
     {
         try

@@ -1,11 +1,6 @@
 ﻿using Anjos.Application.Services;
 using Anjos.Domain.Dto;
-using Anjos.Domain.Entities;
-using Anjos.API.Utils;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using static Anjos.API.Utils.Endpoints;
 
 namespace Anjos.API.Controllers;
@@ -22,7 +17,7 @@ public class VendaProdutoController : ControllerBase
     }
 
     [HttpGet]
-    [Route(VendaProdutoApi.ObterVendaProduto)]
+    [Route(Api.Id)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -41,7 +36,7 @@ public class VendaProdutoController : ControllerBase
     }
 
     [HttpGet]
-    [Route(VendaProdutoApi.ObterPorVenda)]
+    [Route(Api.V1)]
     public async Task<IActionResult> GetPorVenda(int vendaId)
     {
         try
@@ -56,7 +51,7 @@ public class VendaProdutoController : ControllerBase
     }
 
     [HttpPost]
-    [Route(VendaProdutoApi.AdicionarVendaProduto)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AdicionarVendaProduto([FromBody] VendaProdutoDto vendaProdutoDto)
     {
         try
@@ -71,7 +66,7 @@ public class VendaProdutoController : ControllerBase
     }
 
     [HttpPut]
-    [Route(VendaProdutoApi.AtualizarVendaProduto)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AtualizarVendaProduto([FromBody] VendaProdutoDto vendaProdutoDto)
     {
         try
@@ -86,7 +81,7 @@ public class VendaProdutoController : ControllerBase
     }
 
     [HttpDelete]
-    [Route(VendaProdutoApi.DeletarVendaProduto)]
+    [Route(Api.Id)]
     public async Task<IActionResult> DeletarVendaProduto(int id)
     {
         try

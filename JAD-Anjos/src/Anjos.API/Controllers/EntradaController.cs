@@ -19,7 +19,7 @@ public class EntradaController : ControllerBase
     }
 
     [HttpGet]
-    [Route(EntradaApi.ObterEntrada)]
+    [Route(Api.Id)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -34,7 +34,7 @@ public class EntradaController : ControllerBase
     }
 
     [HttpGet]
-    [Route(EntradaApi.ObterPaginado)]
+    [Route(Api.V1)]
     public async Task<IActionResult> GetEntradas([FromQuery] PaginacaoDto dto)
     {
         try
@@ -49,7 +49,7 @@ public class EntradaController : ControllerBase
     }
 
     [HttpPost]
-    [Route(EntradaApi.CadastrarEntrada)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AdicionarEntrada([FromBody] EntradaDto entrada)
     {
         try
@@ -64,7 +64,7 @@ public class EntradaController : ControllerBase
     }
 
     [HttpPut]
-    [Route(EntradaApi.AtualizarEntrada)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AtualizarEntrada([FromBody] EntradaDto entrada)
     {
         try
@@ -79,7 +79,7 @@ public class EntradaController : ControllerBase
     }
 
     [HttpDelete]
-    [Route(EntradaApi.DeletarEntrada)]
+    [Route(Api.Id)]
     public async Task<IActionResult> DeletarEntrada(int id)
     {
         try

@@ -17,7 +17,7 @@ public class ParcelaController : ControllerBase
     }
 
     [HttpGet]
-    [Route(ParcelaApi.ObterParcela)]
+    [Route(Api.Id)]
     public async Task<IActionResult> Get(int id)
     {
         try
@@ -32,7 +32,7 @@ public class ParcelaController : ControllerBase
     }
 
     [HttpGet]
-    [Route(ParcelaApi.ObterPaginado)]
+    [Route(Api.V1)]
     public async Task<IActionResult> GetParcelas([FromQuery] PaginacaoDto dto)
     {
         try
@@ -47,7 +47,7 @@ public class ParcelaController : ControllerBase
     }
 
     [HttpPost]
-    [Route(ParcelaApi.CadastrarParcela)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AdicionarParcela([FromBody] ParcelaDto parcela)
     {
         try
@@ -62,7 +62,7 @@ public class ParcelaController : ControllerBase
     }
 
     [HttpPut]
-    [Route(ParcelaApi.AtualizarParcela)]
+    [Route(Api.V1)]
     public async Task<IActionResult> AtualizarParcela([FromBody] ParcelaDto parcela)
     {
         try
@@ -77,7 +77,7 @@ public class ParcelaController : ControllerBase
     }
 
     [HttpDelete]
-    [Route(ParcelaApi.DeletarParcela)]
+    [Route(Api.Id)]
     public async Task<IActionResult> DeletarParcela(int id)
     {
         try
